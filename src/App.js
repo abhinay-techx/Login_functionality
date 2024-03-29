@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes instead of Switch
+import SignupPage from '../src/SignupPage';
+import LoginPage from '../src/LoginPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Routes> {/* Use Routes instead of Switch */}
+          <Route exact path="/signup" element={<SignupPage />} /> {/* Use element prop */}
+          <Route exact path="/login" element={<LoginPage />} /> {/* Use element prop */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
