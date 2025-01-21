@@ -1,11 +1,40 @@
-/* Signup Page */
-.container {
+/* General Body Styles */
+body {
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; /* Adding font for a consistent look */
 }
 
+/* Main Container for Buttons */
+.main-container {
+  text-align: center;
+}
+
+/* Buttons Styles */
+.button-css {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none; /* Removes underline for links */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px; /* Space between buttons */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-css:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Signup Page */
 .signup-container {
   max-width: 400px;
   width: 100%;
@@ -47,15 +76,7 @@
   background-color: #0056b3;
 }
 
-/* Login Page CSS */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa; /* Light background color */
-}
-
+/* Login Page */
 .login-container {
   display: flex;
   justify-content: center;
@@ -97,4 +118,12 @@
 
 .login-box button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Container for the Login and SignUp pages */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
